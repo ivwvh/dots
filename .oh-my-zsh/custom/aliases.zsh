@@ -1,0 +1,6 @@
+alias ls="eza"
+alias ll="eza -l"
+alias lt="eza -T"
+alias z="zeditor"
+alias n="nvim"
+alias make="make -j10"
