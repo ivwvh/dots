@@ -26,6 +26,6 @@ bspc rule -a Steam manage=off
 setxkbmap -layout us,ru &&
 setxkbmap -option "grp:lctrl_lalt_toggle" &&
 ~/.fehbg &&
-picom --daemon &
+picom --daemon &&
 ~/.config/polybar/launch.sh &&
 
