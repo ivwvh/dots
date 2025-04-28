@@ -131,7 +131,7 @@ static const char *colorname[] = {
  */
 unsigned int defaultfg = 258;
 unsigned int defaultbg = 259;
-unsigned int defaultcs = 256;
+unsigned int defaultcs = 258;
 static unsigned int defaultrcs = 257;
 
 /*
@@ -212,8 +212,8 @@ ResourcePref resources[] = {
  */
 static MouseShortcut mshortcuts[] = {
 	/* mask                 button   function        argument       release */
-	{ ShiftMask,            Button4, kscrollup,      {.i = 1} },
-	{ ShiftMask,            Button5, kscrolldown,    {.i = 1} },
+	{ ControlMask,          Button4, kscrollup,      {.i = 1} },
+	{ ControlMask,          Button5, kscrolldown,    {.i = 1} },
 	{ XK_ANY_MOD,           Button2, selpaste,       {.i = 0},      1 },
 	{ ShiftMask,            Button4, ttysend,        {.s = "\033[5;2~"} },
 	{ XK_ANY_MOD,           Button4, ttysend,        {.s = "\031"} },
@@ -240,7 +240,7 @@ static Shortcut shortcuts[] = {
 	{ ShiftMask,            XK_Insert,      selpaste,       {.i =  0} },
 	{ TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
 	{ ShiftMask,            XK_Page_Up,     kscrollup,      {.i = -1} },
-    { ShiftMask,            XK_Page_Down,   kscrolldown,    {.i = -1} },
+  { ShiftMask,          XK_Page_Down,   kscrolldown,    {.i = -1} },
 };
 
 /*
@@ -285,7 +285,6 @@ static Key key[] = {
 	{ XK_KP_Home,       ShiftMask,      "\033[2J",       0,   -1},
 	{ XK_KP_Home,       ShiftMask,      "\033[1;2H",     0,   +1},
 	{ XK_KP_Home,       XK_ANY_MOD,     "\033[H",        0,   -1},
-	{ XK_KP_Home,       XK_ANY_MOD,     "\033[1~",    Add site to list: Alt+Shift+A   0,   +1},
 	{ XK_KP_Up,         XK_ANY_MOD,     "\033Ox",       +1,    0},
 	{ XK_KP_Up,         XK_ANY_MOD,     "\033[A",        0,   -1},
 	{ XK_KP_Up,         XK_ANY_MOD,     "\033OA",        0,   +1},

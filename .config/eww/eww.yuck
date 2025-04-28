@@ -1,0 +1,50 @@
+(defwindow music-player
+  :monitor 0
+  :geometry (geometry 
+              :x "5%"
+              :y "5%"
+              :width 300
+              :height 100
+              :anchor "top left")
+  :stacking "fg"
+  (music-player-widget))
+
+(defwidget music-player-widget []
+  (box
+    :orientation "vertical"
+    :class "music-player"
+    (label
+      :text (get-music-title)
+      :class "music-title"
+      :limit-width 280
+      :truncate "end")
+    (label
+      :text (get-music-artist)
+      :class "music-artist"
+      :limit-width 280
+      :truncate "end")
+    (box
+      :orientation "horizontal"
+      :class "music-controls"
+      (button
+        :onclick "mpc prev"
+        :class "music-btn"
+        "⏮")
+      (button
+        :text (if (eq (get-music-status) "playing") "⏸" "⏵")
+        :onclick "mpc toggle"
+        :class "music-btn")
+      (button
+        :onclick "mpc next"
+        :class "music-btn"
+        "⏭"))
+    (progress
+      :value (get-music-progress)
+      :class "music-progress")))
+
+
+
+(defpoll get-music-title :interval "1s" "sh ~/.config/eww/music-scripts.sh --title")
+(defpoll get-music-artist :interval "1s" "sh ~/.config/eww/music-scripts.sh --artist")
+(defpoll get-music-status :interval "1s" "sh ~/.config/eww/music-scripts.sh --status")
+(defpoll get-music-progress :interval "1s" "sh ~/.config/eww/music-scripts.sh --progress")

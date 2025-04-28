@@ -1,3 +1,7 @@
 set font        "monospace 12"
 set default-fg  "#dcd7ba"
 set default-bg  "#1f1f28"
+set recolor   
+set recolor-lightcolor "#222222"
+set recolor-keephue
+

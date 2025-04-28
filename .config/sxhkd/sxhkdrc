@@ -5,7 +5,7 @@
 
 # terminal emulator
 super + Return
-	st
+	alacritty
 
 # program launcher
 super + @space
@@ -123,9 +123,6 @@ super + {Left,Down,Up,Right}
 
 super + r 
   source ~/.config/rofi/powermenu/type-1/powermenu.sh
-
-ctrl + alt
- notify-send "`xkb-switch`"
 
 super + e
  betterlockscreen -l

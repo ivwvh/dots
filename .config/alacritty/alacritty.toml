@@ -1,0 +1,11 @@
+[general]
+import = [
+    "~/dotfiles/.config/alacritty/themes/themes/kanagawa_wave.toml"
+]
+
+[window]
+decorations = "None"
+
+[font]
+normal = {family = "monospace"}
+size = 12.00
