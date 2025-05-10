@@ -1,11 +1,12 @@
 [general]
 import = [
-    "~/dotfiles/.config/alacritty/themes/themes/kanagawa_wave.toml"
+    "~/.config/alacritty/themes/themes/kanagawa_dragon.toml"
 ]
-
+[colors]
+transparent_background_colors = true
 [window]
 decorations = "None"
-
+opacity = 0.85
 [font]
 normal = {family = "monospace"}
-size = 12.00
+size = 15.00
